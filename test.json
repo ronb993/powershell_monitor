@@ -1,0 +1,122 @@
+[
+    {
+        "Name":  "Albion-Online",
+        "Handle":  3116
+    },
+    {
+        "Name":  "ApplicationFrameHost",
+        "Handle":  3248
+    },
+    {
+        "Name":  "audiodg",
+        "Handle":  null
+    },
+    {
+        "Name":  "CalculatorApp",
+        "Handle":  2656
+    },
+    {
+        "Name":  "Code",
+        "Handle":  2660
+    },
+    {
+        "Name":  "Code",
+        "Handle":  2672
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3120
+    },
+    {
+        "Name":  "Code",
+        "Handle":  2676
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3452
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3152
+    },
+    {
+        "Name":  "Code",
+        "Handle":  1704
+    },
+    {
+        "Name":  "Code",
+        "Handle":  1688
+    },
+    {
+        "Name":  "Code",
+        "Handle":  2252
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3032
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3332
+    },
+    {
+        "Name":  "Code",
+        "Handle":  2932
+    },
+    {
+        "Name":  "Code",
+        "Handle":  2948
+    },
+    {
+        "Name":  "Code",
+        "Handle":  2952
+    },
+    {
+        "Name":  "Code",
+        "Handle":  2956
+    },
+    {
+        "Name":  "conhost",
+        "Handle":  2960
+    },
+    {
+        "Name":  "conhost",
+        "Handle":  3392
+    },
+    {
+        "Name":  "conhost",
+        "Handle":  3756
+    },
+    {
+        "Name":  "csrss",
+        "Handle":  null
+    },
+    {
+        "Name":  "csrss",
+        "Handle":  null
+    },
+    {
+        "Name":  "ctfmon",
+        "Handle":  null
+    },
+    {
+        "Name":  "Discord",
+        "Handle":  3760
+    },
+    {
+        "Name":  "Discord",
+        "Handle":  2416
+    },
+    {
+        "Name":  "Discord",
+        "Handle":  2796
+    },
+    {
+        "Name":  "Discord",
+        "Handle":  2420
+    },
+    {
+        "Name":  "Discord",
+        "Handle":  2804
+    }
+]

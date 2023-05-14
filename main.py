@@ -6,7 +6,7 @@ import fetch_data, logging
 """
 disables logging
 """
-logging.getLogger("werkzeug").disabled = True
+logging.getLogger("werkzeug").disabled = False
 
 """
 Background Thread
@@ -25,9 +25,9 @@ Grab coordinates from Radar
 def background_thread():
     print("Pulling powershell data")
     while True:
-        #i, e, f, s, p = fetch_data.update()
-        #socketio.emit('updateSensorData', {"items":i, "enemy":e, "friend":f, "scav":s, "player":p})
-        socketio.sleep(2)
+        d = fetch_data.update()
+        socketio.emit('updateData', {"pshell":d})
+        socketio.sleep(10)
 
 """
 Serve root index file

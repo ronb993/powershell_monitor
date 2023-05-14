@@ -9,9 +9,9 @@
     float: center;
     color: #f2f2f2;
     text-align: center;
-    padding: 12px 12px;
+    padding: 14px 14px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 /* Change the color of links on hover */
@@ -27,10 +27,19 @@
 }
 
 body {
+    margin: 0px auto;
+    justify-content: center;
+    float: center;
     background-color: rgb(0, 0, 0);
     text-align: center;
 }
 
-canvas {
-    position: absolute;
+table, th, td {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 14px;
+    border: 14px solid;
 }
