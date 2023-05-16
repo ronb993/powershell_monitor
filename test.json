@@ -1,122 +1,50 @@
 [
     {
-        "Name":  "Albion-Online",
-        "Handle":  3116
+        "Name":  "static",
+        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\static",
+        "CreationTime":  "\/Date(1684018866781)\/",
+        "LastWriteTime":  "\/Date(1684018866783)\/"
     },
     {
-        "Name":  "ApplicationFrameHost",
-        "Handle":  3248
+        "Name":  "templates",
+        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\templates",
+        "CreationTime":  "\/Date(1684018866784)\/",
+        "LastWriteTime":  "\/Date(1684018866785)\/"
     },
     {
-        "Name":  "audiodg",
-        "Handle":  null
+        "Name":  "__pycache__",
+        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\__pycache__",
+        "CreationTime":  "\/Date(1684018866778)\/",
+        "LastWriteTime":  "\/Date(1684024982027)\/"
     },
     {
-        "Name":  "CalculatorApp",
-        "Handle":  2656
+        "Name":  "fetch_data.py",
+        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\fetch_data.py",
+        "CreationTime":  "\/Date(1684018866779)\/",
+        "LastWriteTime":  "\/Date(1684024980301)\/"
     },
     {
-        "Name":  "Code",
-        "Handle":  2660
+        "Name":  "main.py",
+        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\main.py",
+        "CreationTime":  "\/Date(1684018866780)\/",
+        "LastWriteTime":  "\/Date(1684026699496)\/"
     },
     {
-        "Name":  "Code",
-        "Handle":  2672
+        "Name":  "powershell_monitor.code-workspace",
+        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\powershell_monitor.code-workspace",
+        "CreationTime":  "\/Date(1684018866781)\/",
+        "LastWriteTime":  "\/Date(1684018866781)\/"
     },
     {
-        "Name":  "Code",
-        "Handle":  3120
+        "Name":  "README.md",
+        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\README.md",
+        "CreationTime":  "\/Date(1684018866778)\/",
+        "LastWriteTime":  "\/Date(1684025083177)\/"
     },
     {
-        "Name":  "Code",
-        "Handle":  2676
-    },
-    {
-        "Name":  "Code",
-        "Handle":  3452
-    },
-    {
-        "Name":  "Code",
-        "Handle":  3152
-    },
-    {
-        "Name":  "Code",
-        "Handle":  1704
-    },
-    {
-        "Name":  "Code",
-        "Handle":  1688
-    },
-    {
-        "Name":  "Code",
-        "Handle":  2252
-    },
-    {
-        "Name":  "Code",
-        "Handle":  3032
-    },
-    {
-        "Name":  "Code",
-        "Handle":  3332
-    },
-    {
-        "Name":  "Code",
-        "Handle":  2932
-    },
-    {
-        "Name":  "Code",
-        "Handle":  2948
-    },
-    {
-        "Name":  "Code",
-        "Handle":  2952
-    },
-    {
-        "Name":  "Code",
-        "Handle":  2956
-    },
-    {
-        "Name":  "conhost",
-        "Handle":  2960
-    },
-    {
-        "Name":  "conhost",
-        "Handle":  3392
-    },
-    {
-        "Name":  "conhost",
-        "Handle":  3756
-    },
-    {
-        "Name":  "csrss",
-        "Handle":  null
-    },
-    {
-        "Name":  "csrss",
-        "Handle":  null
-    },
-    {
-        "Name":  "ctfmon",
-        "Handle":  null
-    },
-    {
-        "Name":  "Discord",
-        "Handle":  3760
-    },
-    {
-        "Name":  "Discord",
-        "Handle":  2416
-    },
-    {
-        "Name":  "Discord",
-        "Handle":  2796
-    },
-    {
-        "Name":  "Discord",
-        "Handle":  2420
-    },
-    {
-        "Name":  "Discord",
-        "Handle":  2804
+        "Name":  "test.json",
+        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\test.json",
+        "CreationTime":  "\/Date(1684019704503)\/",
+        "LastWriteTime":  "\/Date(1684033044873)\/"
     }
 ]

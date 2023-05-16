@@ -20,14 +20,14 @@ app.config['SECRET_KEY'] = 'donsky!'
 socketio = SocketIO(app, cors_allowed_origins='*')
 
 """
-Grab coordinates from Radar
+Grab powershell data and push to javascript
 """
 def background_thread():
     print("Pulling powershell data")
     while True:
         d = fetch_data.update()
         socketio.emit('updateData', {"pshell":d})
-        socketio.sleep(10)
+        socketio.sleep(2)
 
 """
 Serve root index file
