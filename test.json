@@ -1,50 +1,122 @@
 [
     {
-        "Name":  "static",
-        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\static",
-        "CreationTime":  "\/Date(1684018866781)\/",
-        "LastWriteTime":  "\/Date(1684018866783)\/"
+        "Name":  "ApplicationFrameHost",
+        "Handle":  3564,
+        "Id":  13468,
+        "CPU":  0.140625
     },
     {
-        "Name":  "templates",
-        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\templates",
-        "CreationTime":  "\/Date(1684018866784)\/",
-        "LastWriteTime":  "\/Date(1684018866785)\/"
+        "Name":  "audiodg",
+        "Handle":  null,
+        "Id":  4056,
+        "CPU":  6.46875
     },
     {
-        "Name":  "__pycache__",
-        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\__pycache__",
-        "CreationTime":  "\/Date(1684018866778)\/",
-        "LastWriteTime":  "\/Date(1684024982027)\/"
+        "Name":  "CalculatorApp",
+        "Handle":  3480,
+        "Id":  884,
+        "CPU":  0.484375
     },
     {
-        "Name":  "fetch_data.py",
-        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\fetch_data.py",
-        "CreationTime":  "\/Date(1684018866779)\/",
-        "LastWriteTime":  "\/Date(1684024980301)\/"
+        "Name":  "Code",
+        "Handle":  3572,
+        "Id":  8552,
+        "CPU":  3.46875
     },
     {
-        "Name":  "main.py",
-        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\main.py",
-        "CreationTime":  "\/Date(1684018866780)\/",
-        "LastWriteTime":  "\/Date(1684026699496)\/"
+        "Name":  "Code",
+        "Handle":  3580,
+        "Id":  9468,
+        "CPU":  3.65625
     },
     {
-        "Name":  "powershell_monitor.code-workspace",
-        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\powershell_monitor.code-workspace",
-        "CreationTime":  "\/Date(1684018866781)\/",
-        "LastWriteTime":  "\/Date(1684018866781)\/"
+        "Name":  "Code",
+        "Handle":  3588,
+        "Id":  9476,
+        "CPU":  3.671875
     },
     {
-        "Name":  "README.md",
-        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\README.md",
-        "CreationTime":  "\/Date(1684018866778)\/",
-        "LastWriteTime":  "\/Date(1684025083177)\/"
+        "Name":  "Code",
+        "Handle":  3596,
+        "Id":  9748,
+        "CPU":  0.046875
     },
     {
-        "Name":  "test.json",
-        "FullName":  "C:\\Users\\luke\\Documents\\programming\\powershell_monitor\\test.json",
-        "CreationTime":  "\/Date(1684019704503)\/",
-        "LastWriteTime":  "\/Date(1684033044873)\/"
+        "Name":  "Code",
+        "Handle":  3604,
+        "Id":  9844,
+        "CPU":  7.890625
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3612,
+        "Id":  9892,
+        "CPU":  0.171875
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3620,
+        "Id":  10100,
+        "CPU":  17.65625
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3628,
+        "Id":  10256,
+        "CPU":  0.5625
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3636,
+        "Id":  10448,
+        "CPU":  0.734375
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3644,
+        "Id":  10548,
+        "CPU":  1.796875
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3652,
+        "Id":  10572,
+        "CPU":  2.5625
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3660,
+        "Id":  10756,
+        "CPU":  0.25
+    },
+    {
+        "Name":  "Code",
+        "Handle":  3668,
+        "Id":  11396,
+        "CPU":  8.09375
+    },
+    {
+        "Name":  "conhost",
+        "Handle":  3676,
+        "Id":  10520,
+        "CPU":  0.03125
+    },
+    {
+        "Name":  "conhost",
+        "Handle":  3684,
+        "Id":  10788,
+        "CPU":  0.109375
+    },
+    {
+        "Name":  "conhost",
+        "Handle":  3692,
+        "Id":  11760,
+        "CPU":  0.03125
+    },
+    {
+        "Name":  "conhost",
+        "Handle":  3700,
+        "Id":  12516,
+        "CPU":  0.03125
     }
 ]
