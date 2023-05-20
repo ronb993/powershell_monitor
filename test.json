@@ -28,7 +28,7 @@
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  55888,
+        "localport":  56059,
         "remoteaddress":  "34.120.237.76",
         "remoteport":  443,
         "State":  5,
@@ -37,7 +37,7 @@
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  55889,
+        "localport":  56058,
         "remoteaddress":  "34.120.115.102",
         "remoteport":  443,
         "State":  5,
@@ -55,25 +55,34 @@
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  55860,
-        "remoteaddress":  "34.117.237.239",
-        "remoteport":  443,
+        "localport":  56091,
+        "remoteaddress":  "23.2.94.76",
+        "remoteport":  80,
         "State":  11,
         "process":  "Idle",
         "cmdline":  null
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  55903,
-        "remoteaddress":  "185.199.110.154",
-        "remoteport":  443,
-        "State":  5,
-        "process":  "firefox",
-        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
+        "localport":  56092,
+        "remoteaddress":  "209.197.3.8",
+        "remoteport":  80,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  55868,
+        "localport":  56048,
+        "remoteaddress":  "192.229.211.108",
+        "remoteport":  80,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
+        "localport":  56025,
         "remoteaddress":  "18.160.181.186",
         "remoteport":  443,
         "State":  11,
@@ -82,7 +91,16 @@
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  55900,
+        "localport":  56043,
+        "remoteaddress":  "172.64.162.15",
+        "remoteport":  80,
+        "State":  5,
+        "process":  "powershell",
+        "cmdline":  null
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
+        "localport":  56068,
         "remoteaddress":  "172.217.4.78",
         "remoteport":  443,
         "State":  5,
@@ -91,7 +109,25 @@
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  55898,
+        "localport":  56067,
+        "remoteaddress":  "172.217.2.45",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "firefox",
+        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
+        "localport":  56049,
+        "remoteaddress":  "172.217.1.99",
+        "remoteport":  80,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
+        "localport":  56066,
         "remoteaddress":  "172.217.0.170",
         "remoteport":  443,
         "State":  11,
@@ -100,8 +136,8 @@
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  55827,
-        "remoteaddress":  "146.75.82.167",
+        "localport":  56009,
+        "remoteaddress":  "146.75.78.167",
         "remoteport":  443,
         "State":  5,
         "process":  "firefox",
@@ -109,8 +145,17 @@
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  55899,
-        "remoteaddress":  "142.250.190.109",
+        "localport":  56050,
+        "remoteaddress":  "142.250.190.67",
+        "remoteport":  443,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
+        "localport":  56061,
+        "remoteaddress":  "142.250.190.36",
         "remoteport":  443,
         "State":  5,
         "process":  "firefox",
@@ -118,12 +163,12 @@
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  55896,
-        "remoteaddress":  "142.250.190.100",
+        "localport":  56071,
+        "remoteaddress":  "142.250.190.106",
         "remoteport":  443,
-        "State":  5,
-        "process":  "firefox",
-        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
         "LocalAddress":  "192.168.10.10",
@@ -136,12 +181,21 @@
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  55910,
-        "remoteaddress":  "104.22.3.43",
+        "localport":  56094,
+        "remoteaddress":  "108.156.113.147",
         "remoteport":  443,
         "State":  5,
         "process":  "firefox",
         "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
+        "localport":  56073,
+        "remoteaddress":  "104.17.25.14",
+        "remoteport":  443,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
         "LocalAddress":  "192.168.10.10",
