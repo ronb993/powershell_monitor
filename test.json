@@ -1,6 +1,15 @@
 [
     {
         "LocalAddress":  "192.168.10.10",
+        "localport":  56182,
+        "remoteaddress":  "8.8.8.8",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "Discord",
+        "cmdline":  "\"C:\\Users\\luke\\AppData\\Local\\Discord\\app-1.0.9013\\Discord.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --user-data-dir=\"C:\\Users\\luke\\AppData\\Roaming\\discord\" --mojo-platform-channel-handle=2124 --field-trial-handle=1792,i,3132909863165201556,4170347679574945658,131072 --disable-features=HardwareMediaKeyHandling,MediaSessionService,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:8"
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
         "localport":  53632,
         "remoteaddress":  "52.27.123.112",
         "remoteport":  443,
@@ -31,18 +40,18 @@
         "localport":  56059,
         "remoteaddress":  "34.120.237.76",
         "remoteport":  443,
-        "State":  5,
-        "process":  "firefox",
-        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
         "LocalAddress":  "192.168.10.10",
         "localport":  56058,
         "remoteaddress":  "34.120.115.102",
         "remoteport":  443,
-        "State":  5,
-        "process":  "firefox",
-        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
         "LocalAddress":  "192.168.10.10",
@@ -55,39 +64,12 @@
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  56091,
-        "remoteaddress":  "23.2.94.76",
-        "remoteport":  80,
-        "State":  11,
-        "process":  "Idle",
-        "cmdline":  null
-    },
-    {
-        "LocalAddress":  "192.168.10.10",
-        "localport":  56092,
-        "remoteaddress":  "209.197.3.8",
-        "remoteport":  80,
-        "State":  11,
-        "process":  "Idle",
-        "cmdline":  null
-    },
-    {
-        "LocalAddress":  "192.168.10.10",
-        "localport":  56048,
-        "remoteaddress":  "192.229.211.108",
-        "remoteport":  80,
-        "State":  11,
-        "process":  "Idle",
-        "cmdline":  null
-    },
-    {
-        "LocalAddress":  "192.168.10.10",
-        "localport":  56025,
+        "localport":  56197,
         "remoteaddress":  "18.160.181.186",
         "remoteport":  443,
-        "State":  11,
-        "process":  "Idle",
-        "cmdline":  null
+        "State":  5,
+        "process":  "firefox",
+        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
     },
     {
         "LocalAddress":  "192.168.10.10",
@@ -95,7 +77,7 @@
         "remoteaddress":  "172.64.162.15",
         "remoteport":  80,
         "State":  5,
-        "process":  "powershell",
+        "process":  null,
         "cmdline":  null
     },
     {
@@ -103,49 +85,76 @@
         "localport":  56068,
         "remoteaddress":  "172.217.4.78",
         "remoteport":  443,
-        "State":  5,
-        "process":  "firefox",
-        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
         "LocalAddress":  "192.168.10.10",
         "localport":  56067,
         "remoteaddress":  "172.217.2.45",
         "remoteport":  443,
-        "State":  5,
-        "process":  "firefox",
-        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
-    },
-    {
-        "LocalAddress":  "192.168.10.10",
-        "localport":  56049,
-        "remoteaddress":  "172.217.1.99",
-        "remoteport":  80,
         "State":  11,
         "process":  "Idle",
         "cmdline":  null
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  56066,
-        "remoteaddress":  "172.217.0.170",
-        "remoteport":  443,
-        "State":  11,
-        "process":  "Idle",
-        "cmdline":  null
-    },
-    {
-        "LocalAddress":  "192.168.10.10",
-        "localport":  56009,
-        "remoteaddress":  "146.75.78.167",
+        "localport":  56188,
+        "remoteaddress":  "162.159.137.234",
         "remoteport":  443,
         "State":  5,
-        "process":  "firefox",
-        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
+        "process":  "Discord",
+        "cmdline":  "\"C:\\Users\\luke\\AppData\\Local\\Discord\\app-1.0.9013\\Discord.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --user-data-dir=\"C:\\Users\\luke\\AppData\\Roaming\\discord\" --mojo-platform-channel-handle=2124 --field-trial-handle=1792,i,3132909863165201556,4170347679574945658,131072 --disable-features=HardwareMediaKeyHandling,MediaSessionService,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:8"
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  56050,
+        "localport":  56180,
+        "remoteaddress":  "162.159.136.234",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "Discord",
+        "cmdline":  "\"C:\\Users\\luke\\AppData\\Local\\Discord\\app-1.0.9013\\Discord.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --user-data-dir=\"C:\\Users\\luke\\AppData\\Roaming\\discord\" --mojo-platform-channel-handle=2124 --field-trial-handle=1792,i,3132909863165201556,4170347679574945658,131072 --disable-features=HardwareMediaKeyHandling,MediaSessionService,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:8"
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
+        "localport":  56179,
+        "remoteaddress":  "162.159.135.232",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "Discord",
+        "cmdline":  "\"C:\\Users\\luke\\AppData\\Local\\Discord\\app-1.0.9013\\Discord.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --user-data-dir=\"C:\\Users\\luke\\AppData\\Roaming\\discord\" --mojo-platform-channel-handle=2124 --field-trial-handle=1792,i,3132909863165201556,4170347679574945658,131072 --disable-features=HardwareMediaKeyHandling,MediaSessionService,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:8"
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
+        "localport":  56194,
+        "remoteaddress":  "162.159.134.232",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "Discord",
+        "cmdline":  "\"C:\\Users\\luke\\AppData\\Local\\Discord\\app-1.0.9013\\Discord.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --user-data-dir=\"C:\\Users\\luke\\AppData\\Roaming\\discord\" --mojo-platform-channel-handle=2124 --field-trial-handle=1792,i,3132909863165201556,4170347679574945658,131072 --disable-features=HardwareMediaKeyHandling,MediaSessionService,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:8"
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
+        "localport":  56178,
+        "remoteaddress":  "162.159.128.233",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "Discord",
+        "cmdline":  "\"C:\\Users\\luke\\AppData\\Local\\Discord\\app-1.0.9013\\Discord.exe\" "
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
+        "localport":  56192,
+        "remoteaddress":  "142.250.191.176",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "Discord",
+        "cmdline":  "\"C:\\Users\\luke\\AppData\\Local\\Discord\\app-1.0.9013\\Discord.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --user-data-dir=\"C:\\Users\\luke\\AppData\\Roaming\\discord\" --mojo-platform-channel-handle=2124 --field-trial-handle=1792,i,3132909863165201556,4170347679574945658,131072 --disable-features=HardwareMediaKeyHandling,MediaSessionService,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:8"
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
+        "localport":  56074,
         "remoteaddress":  "142.250.190.67",
         "remoteport":  443,
         "State":  11,
@@ -154,17 +163,8 @@
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  56061,
+        "localport":  56060,
         "remoteaddress":  "142.250.190.36",
-        "remoteport":  443,
-        "State":  5,
-        "process":  "firefox",
-        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
-    },
-    {
-        "LocalAddress":  "192.168.10.10",
-        "localport":  56071,
-        "remoteaddress":  "142.250.190.106",
         "remoteport":  443,
         "State":  11,
         "process":  "Idle",
@@ -184,13 +184,22 @@
         "localport":  56094,
         "remoteaddress":  "108.156.113.147",
         "remoteport":  443,
-        "State":  5,
-        "process":  "firefox",
-        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
         "LocalAddress":  "192.168.10.10",
-        "localport":  56073,
+        "localport":  56183,
+        "remoteaddress":  "104.18.12.173",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "Discord",
+        "cmdline":  "\"C:\\Users\\luke\\AppData\\Local\\Discord\\app-1.0.9013\\Discord.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --user-data-dir=\"C:\\Users\\luke\\AppData\\Roaming\\discord\" --mojo-platform-channel-handle=2124 --field-trial-handle=1792,i,3132909863165201556,4170347679574945658,131072 --disable-features=HardwareMediaKeyHandling,MediaSessionService,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:8"
+    },
+    {
+        "LocalAddress":  "192.168.10.10",
+        "localport":  56072,
         "remoteaddress":  "104.17.25.14",
         "remoteport":  443,
         "State":  11,
