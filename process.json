@@ -1,0 +1,62 @@
+[
+    {
+        "Name":  "ApplicationFrameHost",
+        "Handles":  415,
+        "CPU":  0.390625,
+        "Id":  12380
+    },
+    {
+        "Name":  "CalculatorApp",
+        "Handles":  708,
+        "CPU":  0.484375,
+        "Id":  12596
+    },
+    {
+        "Name":  "Code",
+        "Handles":  1280,
+        "CPU":  36.90625,
+        "Id":  724
+    },
+    {
+        "Name":  "Code",
+        "Handles":  208,
+        "CPU":  2.046875,
+        "Id":  1340
+    },
+    {
+        "Name":  "Code",
+        "Handles":  316,
+        "CPU":  0.1875,
+        "Id":  1572
+    },
+    {
+        "Name":  "Code",
+        "Handles":  309,
+        "CPU":  6.421875,
+        "Id":  5540
+    },
+    {
+        "Name":  "Code",
+        "Handles":  203,
+        "CPU":  0.421875,
+        "Id":  6304
+    },
+    {
+        "Name":  "Code",
+        "Handles":  368,
+        "CPU":  20.078125,
+        "Id":  6456
+    },
+    {
+        "Name":  "Code",
+        "Handles":  262,
+        "CPU":  0.015625,
+        "Id":  10156
+    },
+    {
+        "Name":  "Code",
+        "Handles":  185,
+        "CPU":  2.046875,
+        "Id":  10736
+    }
+]

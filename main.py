@@ -25,8 +25,9 @@ Grab powershell data and push to javascript
 def background_thread():
     print("Pulling powershell data")
     while True:
-        d = fetch_data.update()
-        socketio.emit('updateData', {"pshell":d})
+        d = fetch_data.update_conn()
+        p = fetch_data.update_process()
+        socketio.emit('updateData', {"conn":d, "proc":p})
         socketio.sleep(5)
 
 """
@@ -35,6 +36,11 @@ Serve root index file
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/report')
+def report():
+    # create_report = fetch_data.create_report()
+    return render_template('report.htm')
 
 """
 Decorator for connect
