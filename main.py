@@ -27,7 +27,7 @@ def background_thread():
     while True:
         d = fetch_data.update()
         socketio.emit('updateData', {"pshell":d})
-        socketio.sleep(2)
+        socketio.sleep(5)
 
 """
 Serve root index file

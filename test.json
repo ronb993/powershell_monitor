@@ -1,122 +1,173 @@
 [
     {
-        "Name":  "ApplicationFrameHost",
-        "Handle":  3564,
-        "Id":  13468,
-        "CPU":  0.140625
+        "LocalAddress":  "192.168.10.10",
+        "localport":  49371,
+        "remoteaddress":  "40.83.247.108",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "svchost",
+        "cmdline":  null
     },
     {
-        "Name":  "audiodg",
-        "Handle":  null,
-        "Id":  4056,
-        "CPU":  6.46875
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52021,
+        "remoteaddress":  "34.120.237.76",
+        "remoteport":  443,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
-        "Name":  "CalculatorApp",
-        "Handle":  3480,
-        "Id":  884,
-        "CPU":  0.484375
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52022,
+        "remoteaddress":  "34.120.115.102",
+        "remoteport":  443,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
-        "Name":  "Code",
-        "Handle":  3572,
-        "Id":  8552,
-        "CPU":  3.46875
+        "LocalAddress":  "192.168.10.10",
+        "localport":  51155,
+        "remoteaddress":  "34.117.65.55",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "firefox",
+        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
     },
     {
-        "Name":  "Code",
-        "Handle":  3580,
-        "Id":  9468,
-        "CPU":  3.65625
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52031,
+        "remoteaddress":  "23.76.205.80",
+        "remoteport":  80,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
-        "Name":  "Code",
-        "Handle":  3588,
-        "Id":  9476,
-        "CPU":  3.671875
+        "LocalAddress":  "192.168.10.10",
+        "localport":  49591,
+        "remoteaddress":  "205.196.6.215",
+        "remoteport":  27036,
+        "State":  5,
+        "process":  "steam",
+        "cmdline":  "\"C:\\Program Files (x86)\\Steam\\steam.exe\" -silent"
     },
     {
-        "Name":  "Code",
-        "Handle":  3596,
-        "Id":  9748,
-        "CPU":  0.046875
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52044,
+        "remoteaddress":  "20.186.185.227",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "firefox",
+        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
     },
     {
-        "Name":  "Code",
-        "Handle":  3604,
-        "Id":  9844,
-        "CPU":  7.890625
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52045,
+        "remoteaddress":  "192.229.211.108",
+        "remoteport":  80,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
-        "Name":  "Code",
-        "Handle":  3612,
-        "Id":  9892,
-        "CPU":  0.171875
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52036,
+        "remoteaddress":  "18.160.96.129",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "firefox",
+        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
     },
     {
-        "Name":  "Code",
-        "Handle":  3620,
-        "Id":  10100,
-        "CPU":  17.65625
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52078,
+        "remoteaddress":  "172.66.43.42",
+        "remoteport":  443,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
-        "Name":  "Code",
-        "Handle":  3628,
-        "Id":  10256,
-        "CPU":  0.5625
+        "LocalAddress":  "192.168.10.10",
+        "localport":  49580,
+        "remoteaddress":  "162.159.138.234",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "Discord",
+        "cmdline":  "\"C:\\Users\\luke\\AppData\\Local\\Discord\\app-1.0.9013\\Discord.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --user-data-dir=\"C:\\Users\\luke\\AppData\\Roaming\\discord\" --mojo-platform-channel-handle=2212 --field-trial-handle=1776,i,16037262062606062254,13997319085499370277,131072 --disable-features=HardwareMediaKeyHandling,MediaSessionService,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:8"
     },
     {
-        "Name":  "Code",
-        "Handle":  3636,
-        "Id":  10448,
-        "CPU":  0.734375
+        "LocalAddress":  "192.168.10.10",
+        "localport":  64293,
+        "remoteaddress":  "162.159.136.234",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "Discord",
+        "cmdline":  "\"C:\\Users\\luke\\AppData\\Local\\Discord\\app-1.0.9013\\Discord.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --user-data-dir=\"C:\\Users\\luke\\AppData\\Roaming\\discord\" --mojo-platform-channel-handle=2212 --field-trial-handle=1776,i,16037262062606062254,13997319085499370277,131072 --disable-features=HardwareMediaKeyHandling,MediaSessionService,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:8"
     },
     {
-        "Name":  "Code",
-        "Handle":  3644,
-        "Id":  10548,
-        "CPU":  1.796875
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52023,
+        "remoteaddress":  "142.251.32.22",
+        "remoteport":  443,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
-        "Name":  "Code",
-        "Handle":  3652,
-        "Id":  10572,
-        "CPU":  2.5625
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52026,
+        "remoteaddress":  "142.250.190.14",
+        "remoteport":  443,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
-        "Name":  "Code",
-        "Handle":  3660,
-        "Id":  10756,
-        "CPU":  0.25
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52038,
+        "remoteaddress":  "13.227.44.214",
+        "remoteport":  443,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
-        "Name":  "Code",
-        "Handle":  3668,
-        "Id":  11396,
-        "CPU":  8.09375
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52110,
+        "remoteaddress":  "104.18.72.113",
+        "remoteport":  443,
+        "State":  11,
+        "process":  "Idle",
+        "cmdline":  null
     },
     {
-        "Name":  "conhost",
-        "Handle":  3676,
-        "Id":  10520,
-        "CPU":  0.03125
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52109,
+        "remoteaddress":  "104.18.70.113",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "firefox",
+        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
     },
     {
-        "Name":  "conhost",
-        "Handle":  3684,
-        "Id":  10788,
-        "CPU":  0.109375
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52079,
+        "remoteaddress":  "104.18.13.173",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "Discord",
+        "cmdline":  "\"C:\\Users\\luke\\AppData\\Local\\Discord\\app-1.0.9013\\Discord.exe\" --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --user-data-dir=\"C:\\Users\\luke\\AppData\\Roaming\\discord\" --mojo-platform-channel-handle=2212 --field-trial-handle=1776,i,16037262062606062254,13997319085499370277,131072 --disable-features=HardwareMediaKeyHandling,MediaSessionService,SpareRendererForSitePerProcess,WinRetrieveSuggestionsOnlyOnDemand /prefetch:8"
     },
     {
-        "Name":  "conhost",
-        "Handle":  3692,
-        "Id":  11760,
-        "CPU":  0.03125
-    },
-    {
-        "Name":  "conhost",
-        "Handle":  3700,
-        "Id":  12516,
-        "CPU":  0.03125
+        "LocalAddress":  "192.168.10.10",
+        "localport":  52103,
+        "remoteaddress":  "104.16.53.111",
+        "remoteport":  443,
+        "State":  5,
+        "process":  "firefox",
+        "cmdline":  "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\""
     }
 ]
