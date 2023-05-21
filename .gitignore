@@ -1,4 +1,4 @@
 # ignore all json
 __pycache__/
 *.json
-Data/
+Data/*
