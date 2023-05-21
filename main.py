@@ -28,7 +28,7 @@ def background_thread():
         d = fetch_data.update_conn()
         p = fetch_data.update_process()
         socketio.emit('updateData', {"conn":d, "proc":p})
-        socketio.sleep(2)
+        socketio.sleep(1)
 
 """
 Serve root index file
