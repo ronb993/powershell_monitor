@@ -19,8 +19,8 @@
     },
     {
         "Name":  "WavesSvc64",
-        "Handles":  374,
-        "CPU":  1.28125,
+        "Handles":  368,
+        "CPU":  1.296875,
         "Id":  9532
     },
     {
@@ -37,21 +37,21 @@
     },
     {
         "Name":  "winlogon",
-        "Handles":  277,
-        "CPU":  0.15625,
+        "Handles":  275,
+        "CPU":  0.171875,
         "Id":  1016
     },
     {
         "Name":  "WmiPrvSE",
         "Handles":  358,
-        "CPU":  1.0625,
+        "CPU":  1.21875,
         "Id":  3164
     },
     {
         "Name":  "WmiPrvSE",
-        "Handles":  177,
-        "CPU":  234.09375,
-        "Id":  6820
+        "Handles":  178,
+        "CPU":  23.21875,
+        "Id":  4760
     },
     {
         "Name":  "WMIRegistrationService",
