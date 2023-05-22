@@ -1,3 +1,14 @@
+.topnav ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.topnav li{
+    margin-right: 10px;
+    display: inline-block;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
     padding-top: 50px;
@@ -23,21 +34,33 @@
 }
 /* Add a color to the active/current link */
 body {
-    padding-left: 400px;
+    padding-left: 225px;
     padding-right: 400px;
     text-align: left;
     background-color: black;
     color: white;
 }
 /* modifies showData (the table) */
-#showData {
-    background-color:black;
+#showData{
+    background-color: black;
     font-size: 14px;
+}
+#showProc{
+    background-color: black;
+    font-size: 14px;
+}
+
+h3 {
+    text-decoration: underline;
 }
 
 table, th, td {
     color: red;
-    border: 0.5px solid;
-    border-width: 0.5px solid;
+    border: 1px solid;
     border-collapse: collapse;
+    max-width: 100%
+}
+
+.highLight {
+    color: lightgreen;
 }

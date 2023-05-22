@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>POWERSHELL MONITOR</title>
     <div class="topnav">
-     <a class="active" href="{{ url_for('index')}}">MONITOR</a>
+     <a class="active" href="{{ url_for('index')}}">MONITOR NET</a>
      <a href="{{ url_for('report')}}">AD Report</a>
-     <a href="">Connections</a>
+     <a href="">AD Objects</a>
+     <ul id="showUsers">Users Connected:</ul>
     </div> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js" integrity="sha512-YeeA/Qxn5hYdkukScTCNNOhTrv1C2RubAGButJ1rmgQwZf/HdRaCGl+JAVkqsqaNRaYNHdheiuKKuPf9mDcqKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -16,9 +17,9 @@
   </head>
   <body>
     <script type="text/javascript" src="{{ url_for('static', filename = 'data_ingest.js') }}"></script>
-    <h2>Connections</h2>
-    <p id="showData"></p>
-    <h2>Processes</h2>
-    <p id="showProc"></p>
+    <h3>Connections</h3>
+    <div id="showData"></div>
+    <h3>Bad JuJu Connections</h3>
+    <div id="showProc"></div>
   </body>
 </html>

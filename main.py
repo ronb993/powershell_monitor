@@ -4,6 +4,11 @@ from threading import Lock
 import fetch_data, logging
 
 """
+save a list of users that are connected
+"""
+connected_users = []
+
+"""
 disables logging
 """
 logging.getLogger("werkzeug").disabled = False
@@ -27,8 +32,9 @@ def background_thread():
     while True:
         d = fetch_data.update_conn()
         p = fetch_data.update_process()
-        socketio.emit('updateData', {"conn":d, "proc":p})
-        socketio.sleep(1)
+        u = connected_users
+        socketio.emit('updateData', {"conn":d, "proc":p, "users":u})
+        socketio.sleep(2)
 
 """
 Serve root index file
@@ -48,6 +54,8 @@ Decorator for connect
 @socketio.on('connect')
 def connect():
     print(f'Client connected at {request.remote_addr}')
+    if request.remote_addr not in connected_users:
+        connected_users.append(request.remote_addr)
     global thread
     with thread_lock:
         if thread is None:
