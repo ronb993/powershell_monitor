@@ -55,9 +55,8 @@ def offline_check():
     if not len(bad_ips) == 0:
         for ip in bad_ips:
             ip_list.append(ip)
-    else:
-        print(f'Network is clear of malicious IPs')
     return ip_list
+
 
 if __name__ == '__main__':
     online_check()

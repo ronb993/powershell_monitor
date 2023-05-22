@@ -1,7 +1,7 @@
+import fetch_data, logging
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO
 from threading import Lock
-import fetch_data, logging
 
 """
 save a list of users that are connected
@@ -33,7 +33,8 @@ def background_thread():
         d = fetch_data.update_conn()
         p = fetch_data.update_process()
         u = connected_users
-        socketio.emit('updateData', {"conn":d, "proc":p, "users":u})
+        b = fetch_data.offline_check()
+        socketio.emit('updateData', {"conn":d, "proc":p, "users":u, "badip":b})
         socketio.sleep(2)
 
 """

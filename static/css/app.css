@@ -41,14 +41,23 @@ body {
     color: white;
 }
 /* modifies showData (the table) */
-#showData{
+#showData {
     background-color: black;
     font-size: 14px;
 }
-#showProc{
+#showBad {
+    list-style-image: url("/static/pictures/icons8-evil-30.png");
     background-color: black;
     font-size: 14px;
+    margin-left: 0px;
+    padding-right: 10px;
 }
+
+#noBad {
+    margin-left: 0;
+    color: magenta;
+}
+
 
 h3 {
     text-decoration: underline;
@@ -64,3 +73,4 @@ table, th, td {
 .highLight {
     color: lightgreen;
 }
+
