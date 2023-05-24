@@ -1,4 +1,4 @@
-import subprocess, re, ipaddress, requests, json
+import re, ipaddress, requests, json
 
 def get_ips_from_ipsum() -> set:
     # Thank you stamparm
@@ -8,42 +8,58 @@ def get_ips_from_ipsum() -> set:
 
 # Get IP from local machine
 def get_ips_locally():
-    ip_list = []
     with open('.\\Data\ipsum.txt') as f:
         lines = f.readlines()
     return set(re.findall(r'[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}', str(lines)))
 
-def netstat_list() -> set:
+# Get IPs from tcp_conn.json (monitoring tool)
+def powershell_list_tcp() -> set:
     result = set()
-    net_conn = subprocess.check_output('netstat -n'.split(), universal_newlines=True).splitlines()
-    nets = re.findall(r'[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}', str(net_conn))
-    for net in nets:
-        if not ipaddress.IPv4Address(net).is_private:
-            result.add((net).rstrip('\n'))
-    return result
+    with open('C:\\temp\\results\\monitor\\tcp_conn.json', 'r') as myfile:
+        data=myfile.read()
+    obj = json.loads(data)
+    conns = re.findall(r'[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}', str(obj))
+    for conn in conns:
+        #If you are looking for non-private from malware ip list
+        #if not ipaddress.IPv4Address(conn).is_private:
+        result.add(conn)
+    return result, obj
 
-def powershell_list() -> set:
-    
-    pass
-
+# Choose online check if you wanna use the local ip list
 def online_check():
     ip_list = []
-    bad_ips = get_ips_from_ipsum() & netstat_list()
+    bad, obj = powershell_list_tcp()
+    bad_ips = get_ips_from_ipsum() & bad
     if not len(bad_ips) == 0:
         for ip in bad_ips:
-            ip_list.append(ip)
+            for key in obj:
+                if key['RemoteAddress'] == ip:
+                    ip_list.append((
+                    key["LocalAddress"], key["LocalPort"],
+                    key["RemoteAddress"], key["RemotePort"],
+                    key["process"], key["cmdline"]))
     else:
-        print(f'Network is clear of malicious IPs')
+        print("No IPs found")
     return ip_list
 
+# use offline check if you do not have internet
 def offline_check():
     ip_list = []
-    bad_ips = get_ips_locally() & netstat_list()
+    bad, obj = powershell_list_tcp()
+    bad_ips = get_ips_locally() & bad
     if not len(bad_ips) == 0:
         for ip in bad_ips:
-            ip_list.append(ip)
+            for key in obj:
+                if key['RemoteAddress'] == ip:
+                    ip_list.append((
+                    key["LocalAddress"], key["LocalPort"],
+                    key["RemoteAddress"], key["RemotePort"],
+                    key["process"], key["cmdline"]))
+    else:
+        print("No IPs found")
     return ip_list
 
-
 if __name__ == '__main__':
-    offline_check()
+    x = offline_check()
+    print(x)
+
