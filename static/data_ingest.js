@@ -27,7 +27,7 @@ for (let i = 0; i < json_data.length; i++) {
   let tr = table.insertRow(-1);
   for (let j = 0; j < col.length; j++) {
     let tabCell = tr.insertCell(-1);
-    if(json_data[i]['NewProcess'] == true){
+    if(json_data[i]['NewConnection'] == true){
       tabCell.innerHTML = `<span class='highLight'>${json_data[i][col[j]]}</span>`;
     }
     else{
