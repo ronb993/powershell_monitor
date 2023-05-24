@@ -83,11 +83,15 @@ def write_to_csv(data):
             csv_out.writerow(fields)
             for row in data:
                 csv_out.writerow(row)
+        return
     else:
-        with open('C:\\temp\\results\\bad_tcp\\bad_tcp.csv', 'a', newline='') as out:
-            csv_out = csv.writer(out)
-            for row in data:
-                csv_out.writerow(row)
+        with open('C:\\temp\\results\\bad_tcp\\bad_tcp.csv', 'a+', newline='') as out:
+            csv_out = csv.write(out)
+            read_file = out.readlines()
+            if read_file[-1] != data[-1]:
+                for row in data:
+                    csv_out.writerow(row)
+        return
 
     
 if __name__ == '__main__':

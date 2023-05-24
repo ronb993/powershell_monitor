@@ -29,5 +29,5 @@ while($true){
     set-content "C:\temp\results\json_data\tcp_conn.json"
 
 
-    Start-Sleep(2)
+    Start-Sleep(0.5)
 }
