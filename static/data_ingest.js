@@ -49,14 +49,18 @@ function get_badip(data){
   nobad.innerHTML = "No Bad IPs Connected via TCP";
   if(ip_list.length > 0){
     nobad.innerHTML = "";
-    console.log(ip_list.length);
     ip_list.forEach((item)=>{
+      console.log(item);
       let li = document.createElement("li");
-      li.appendChild(document.createTextNode(item));
+      li.appendChild(document.createTextNode('Local IP: '+item[0]));
+      li.appendChild(document.createTextNode(' Local Port:'+item[1]));
+      li.appendChild(document.createTextNode(' Remote IP:'+item[2]));
+      li.appendChild(document.createTextNode(' Remote Port:'+item[3]));
+      li.appendChild(document.createTextNode(' Process:'+item[4]));
+      li.appendChild(document.createTextNode(' Time:'+item[6]));
       bad.appendChild(li);
     })
   }
-
 };
 
 function get_users(data){

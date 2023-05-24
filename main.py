@@ -32,9 +32,9 @@ def background_thread():
     while True:
         d = fetch_json.update_conn()
         u = connected_users
-        b = bad_juju.offline_check()
+        b = bad_juju.process_data('offline')
         socketio.emit('updateData', {"conn":d, "users":u, "badip":b})
-        socketio.sleep(2)
+        socketio.sleep(3)
 
 """
 Serve root index file

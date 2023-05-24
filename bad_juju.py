@@ -1,4 +1,12 @@
-import re, ipaddress, requests, json
+import re, requests, json, csv, os
+
+fields = ['LocalAddress',
+          'LocalPort',
+          'RemoteAddress',
+          'RemotePort',
+          'Process',
+          'CmdLine',
+          'Time']
 
 def get_ips_from_ipsum() -> set:
     # Thank you stamparm
@@ -15,7 +23,7 @@ def get_ips_locally():
 # Get IPs from tcp_conn.json (monitoring tool)
 def powershell_list_tcp() -> set:
     result = set()
-    with open('C:\\temp\\results\\monitor\\tcp_conn.json', 'r') as myfile:
+    with open('C:\\temp\\results\\json_data\\tcp_conn.json', 'r') as myfile:
         data=myfile.read()
     obj = json.loads(data)
     conns = re.findall(r'[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}', str(obj))
@@ -37,7 +45,7 @@ def online_check():
                     ip_list.append((
                     key["LocalAddress"], key["LocalPort"],
                     key["RemoteAddress"], key["RemotePort"],
-                    key["process"], key["cmdline"]))
+                    key["process"], key["cmdline"], key["Time"]))
     else:
         print("No IPs found")
     return ip_list
@@ -54,12 +62,35 @@ def offline_check():
                     ip_list.append((
                     key["LocalAddress"], key["LocalPort"],
                     key["RemoteAddress"], key["RemotePort"],
-                    key["process"], key["cmdline"]))
-    else:
-        print("No IPs found")
-    return ip_list
+                    key["process"], key["cmdline"], key["Time"]))
+        return ip_list
 
+def process_data(get_type):
+    if get_type == 'offline':
+        data = offline_check()
+    elif get_type == 'online':
+        data = online_check()
+    else:
+        data = offline_check()
+    if data is not None:
+        write_to_csv(data)
+    return data
+
+def write_to_csv(data):
+    if not os.path.exists('C:\\temp\\results\\bad_tcp\\bad_tcp.csv'):
+        with open('C:\\temp\\results\\bad_tcp\\bad_tcp.csv','x', newline='') as out:
+            csv_out = csv.writer(out)
+            csv_out.writerow(fields)
+            for row in data:
+                csv_out.writerow(row)
+    else:
+        with open('C:\\temp\\results\\bad_tcp\\bad_tcp.csv', 'a', newline='') as out:
+            csv_out = csv.writer(out)
+            for row in data:
+                csv_out.writerow(row)
+
+    
 if __name__ == '__main__':
-    x = offline_check()
-    print(x)
+    process_data('offline')
+
 
