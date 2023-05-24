@@ -77,21 +77,25 @@ def process_data(get_type):
     return data
 
 def write_to_csv(data):
-    if not os.path.exists('C:\\temp\\results\\bad_tcp\\bad_tcp.csv'):
-        with open('C:\\temp\\results\\bad_tcp\\bad_tcp.csv','x', newline='') as out:
-            csv_out = csv.writer(out)
-            csv_out.writerow(fields)
-            for row in data:
-                csv_out.writerow(row)
-        return
-    else:
-        with open('C:\\temp\\results\\bad_tcp\\bad_tcp.csv', 'a+', newline='') as out:
-            csv_out = csv.write(out)
-            read_file = out.readlines()
-            if read_file[-1] != data[-1]:
+    try:
+        if not os.path.exists('C:\\temp\\results\\bad_tcp\\bad_tcp.csv'):
+            with open('C:\\temp\\results\\bad_tcp\\bad_tcp.csv','x', newline='') as f:
+                csv_out = csv.writer(f)
+                csv_out.writerow(fields)
                 for row in data:
                     csv_out.writerow(row)
-        return
+            return
+        else:
+            with open('C:\\temp\\results\\bad_tcp\\bad_tcp.csv', 'r+', newline='') as f:
+                read_last_line = f.readlines()[-1]
+                f.read() # read to append last line
+                csv_out = csv.writer(f)
+                if read_last_line != data[-1]:
+                    for row in data:
+                        csv_out.writerow(row)
+            return
+    except:
+        print("Make sure a file is not open at c:\\temp\\results\\bad_tcp\\")
 
     
 if __name__ == '__main__':
