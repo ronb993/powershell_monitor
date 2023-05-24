@@ -39,7 +39,7 @@ def background_thread():
         except Exception as ex:
             socketio.sleep(1)
             print(ex)
-
+    
 """
 Serve root index file
 """
