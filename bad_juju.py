@@ -4,9 +4,8 @@ fields = ['LocalAddress',
           'LocalPort',
           'RemoteAddress',
           'RemotePort',
-          'Process',
-          'CmdLine',
-          'Time']
+          'Time',
+          'Process']
 
 def get_ips_from_ipsum() -> set:
     # Thank you stamparm
@@ -45,7 +44,7 @@ def online_check():
                     ip_list.append((
                     key["LocalAddress"], key["LocalPort"],
                     key["RemoteAddress"], key["RemotePort"],
-                    key["process"], key["cmdline"], key["Time"]))
+                    key["Time"], key["process"]))
     else:
         print("No IPs found")
     return ip_list
@@ -62,7 +61,7 @@ def offline_check():
                     ip_list.append((
                     key["LocalAddress"], key["LocalPort"],
                     key["RemoteAddress"], key["RemotePort"],
-                    key["process"], key["cmdline"], key["Time"]))
+                    key["Time"], key["process"]))
         return ip_list
 
 def process_data(get_type):
@@ -79,12 +78,12 @@ def process_data(get_type):
 def check_row(row_one, row_two):
     one = (row_one[0], row_one[1],
     row_one[2], row_one[3],
-    row_one[4], row_one[6])
+    row_one[4], row_one[5])
 
     two = (row_two[0], str(row_two[1]),
            row_two[2], str(row_two[3]),
-           row_two[4], row_two[6])
-    
+           row_two[4], row_two[5])
+
     if one == two:
         return True
     else:
@@ -107,17 +106,13 @@ def write_to_csv(data):
                 last_row_csv = fix_row[-1]
                 get_data_row = data[-1]
                 csv_writer = csv.writer(f)
-                if(check_row(last_row_csv, get_data_row)):
-                    print("Rows are the same")
-                else:
+                if(not check_row(last_row_csv, get_data_row)):
                     for row in data:
                         csv_writer.writerow(row)
-                    print("Rows are different, appending file")
 
-                #reader = csv.reader(f, delimiter=',')
-                #output = list(reader)
             return
-    except:
+    except Exception as e:
+        print(e)
         print("Make sure a file is not open at c:\\temp\\results\\bad_tcp\\")
 
     

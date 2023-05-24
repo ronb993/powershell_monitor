@@ -56,8 +56,8 @@ function get_badip(data){
       li.appendChild(document.createTextNode(' Local Port:'+item[1]));
       li.appendChild(document.createTextNode(' Remote IP:'+item[2]));
       li.appendChild(document.createTextNode(' Remote Port:'+item[3]));
-      li.appendChild(document.createTextNode(' Process:'+item[4]));
-      li.appendChild(document.createTextNode(' Time:'+item[6]));
+      li.appendChild(document.createTextNode(' Time:'+item[4]));
+      li.appendChild(document.createTextNode(' Process:'+item[5]));
       bad.appendChild(li);
     })
   }

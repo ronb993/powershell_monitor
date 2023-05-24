@@ -35,9 +35,9 @@ def background_thread():
             u = connected_users
             b = bad_juju.process_data('offline')
             socketio.emit('updateData', {"conn":d, "users":u, "badip":b})
-            socketio.sleep(0.2)
+            socketio.sleep(0.3)
         except Exception as ex:
-            socketio.sleep(0.5)
+            socketio.sleep(1)
             print(ex)
 
 """

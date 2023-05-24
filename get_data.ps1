@@ -24,11 +24,11 @@ while($true){
         Select-Object LocalAddress,LocalPort,RemoteAddress,RemotePort,
         @{name="Time";Expression={$_.CreationTime.ToString()}},
         @{name="NewConnection";Expression={if(($_.CreationTime) -gt $date){$true}else{$false}}},
-        @{name="process";Expression={(get-process -id $_.OwningProcess).ProcessName}},
-        @{name="cmdline";Expression={(Get-WmiObject Win32_Process -filter "ProcessId = $($_.OwningProcess)").commandline}} |
+        @{name="process";Expression={(get-process -id $_.OwningProcess).ProcessName}} |
+        #@{name="cmdline";Expression={(Get-WmiObject Win32_Process -filter "ProcessId = $($_.OwningProcess)").commandline}} |
         Sort-Object RemoteAddress -Descending -Unique | ConvertTo-Json |
         set-content "C:\temp\results\json_data\tcp_conn.json"
-        start-sleep(0.5)
+        start-sleep(0.2)
     }
     
     catch { "Error occured, most likely due to tcp_conn.json being used by another process" }
