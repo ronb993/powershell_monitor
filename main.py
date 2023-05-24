@@ -34,7 +34,7 @@ def background_thread():
         u = connected_users
         b = bad_juju.process_data('offline')
         socketio.emit('updateData', {"conn":d, "users":u, "badip":b})
-        socketio.sleep(3)
+        socketio.sleep(0.2)
 
 """
 Serve root index file
