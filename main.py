@@ -30,11 +30,15 @@ Grab powershell data and push to javascript
 def background_thread():
     print("Pulling powershell data")
     while True:
-        d = fetch_json.update_conn()
-        u = connected_users
-        b = bad_juju.process_data('offline')
-        socketio.emit('updateData', {"conn":d, "users":u, "badip":b})
-        socketio.sleep(0.2)
+        try:
+            d = fetch_json.update_conn()
+            u = connected_users
+            b = bad_juju.process_data('offline')
+            socketio.emit('updateData', {"conn":d, "users":u, "badip":b})
+            socketio.sleep(0.2)
+        except Exception as ex:
+            socketio.sleep(0.5)
+            print(ex)
 
 """
 Serve root index file

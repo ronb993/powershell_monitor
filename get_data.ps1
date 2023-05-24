@@ -18,16 +18,19 @@ write-host "Starting loop to monitor TCP Connections" -f Green
 write-host "Malicious connections can be found in C:\temp\results\" -f Green
 Start-Sleep(5)
 while($true){
-    $date = (get-date).AddSeconds(-15) # Minutes to check for newest processes in the last 3 mins
-    Get-NetTCPConnection | where-object {$_.LocalAddress -eq "192.168.10.10"} | 
-    Select-Object LocalAddress,LocalPort,RemoteAddress,RemotePort,
-    @{name="Time";Expression={$_.CreationTime.ToString()}},
-    @{name="NewConnection";Expression={if(($_.CreationTime) -gt $date){$true}else{$false}}},
-    @{name="process";Expression={(get-process -id $_.OwningProcess).ProcessName}},
-    @{name="cmdline";Expression={(Get-WmiObject Win32_Process -filter "ProcessId = $($_.OwningProcess)").commandline}} |
-    Sort-Object RemoteAddress -Descending -Unique | ConvertTo-Json |
-    set-content "C:\temp\results\json_data\tcp_conn.json"
-
-
-    Start-Sleep(0.2)
+    try{
+        $date = (get-date).AddSeconds(-15) # Minutes to check for newest processes in the last 3 mins
+        Get-NetTCPConnection | where-object {$_.LocalAddress -eq "192.168.10.10"} | 
+        Select-Object LocalAddress,LocalPort,RemoteAddress,RemotePort,
+        @{name="Time";Expression={$_.CreationTime.ToString()}},
+        @{name="NewConnection";Expression={if(($_.CreationTime) -gt $date){$true}else{$false}}},
+        @{name="process";Expression={(get-process -id $_.OwningProcess).ProcessName}},
+        @{name="cmdline";Expression={(Get-WmiObject Win32_Process -filter "ProcessId = $($_.OwningProcess)").commandline}} |
+        Sort-Object RemoteAddress -Descending -Unique | ConvertTo-Json |
+        set-content "C:\temp\results\json_data\tcp_conn.json"
+        start-sleep(0.5)
+    }
+    
+    catch { "Error occured, most likely due to tcp_conn.json being used by another process" }
 }
+

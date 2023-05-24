@@ -2,7 +2,7 @@ import json
 
 # Calls from main to push out tcp connections for monitoring
 def update_conn():
-    with open('C:\\temp\\results\\json_data\\tcp_conn.json', 'r', errors='ignore') as json_file:
+    with open('C:\\temp\\results\\json_data\\tcp_conn.json', 'r') as json_file:
         try:
             data = json.load(json_file, strict=False)
         except Exception as e:

@@ -76,6 +76,21 @@ def process_data(get_type):
         write_to_csv(data)
     return data
 
+def check_row(row_one, row_two):
+    one = (row_one[0], row_one[1],
+    row_one[2], row_one[3],
+    row_one[4], row_one[6])
+
+    two = (row_two[0], str(row_two[1]),
+           row_two[2], str(row_two[3]),
+           row_two[4], row_two[6])
+    
+    if one == two:
+        return True
+    else:
+        return False
+
+
 def write_to_csv(data):
     try:
         if not os.path.exists('C:\\temp\\results\\bad_tcp\\bad_tcp.csv'):
@@ -87,12 +102,20 @@ def write_to_csv(data):
             return
         else:
             with open('C:\\temp\\results\\bad_tcp\\bad_tcp.csv', 'r+', newline='') as f:
-                read_last_line = f.readlines()[-1]
-                f.read() # read to append last line
-                csv_out = csv.writer(f)
-                if read_last_line != data[-1]:
+                read = csv.reader(f, delimiter=',')
+                fix_row = list(read)
+                last_row_csv = fix_row[-1]
+                get_data_row = data[-1]
+                csv_writer = csv.writer(f)
+                if(check_row(last_row_csv, get_data_row)):
+                    print("Rows are the same")
+                else:
                     for row in data:
-                        csv_out.writerow(row)
+                        csv_writer.writerow(row)
+                    print("Rows are different, appending file")
+
+                #reader = csv.reader(f, delimiter=',')
+                #output = list(reader)
             return
     except:
         print("Make sure a file is not open at c:\\temp\\results\\bad_tcp\\")
