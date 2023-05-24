@@ -28,7 +28,6 @@ socketio = SocketIO(app, cors_allowed_origins='*')
 Grab powershell data and push to javascript
 """
 def background_thread():
-    # TODO: Create a results folder and csv file for bad_juju connections
     print("Pulling powershell data")
     while True:
         d = fetch_data.update_conn()
