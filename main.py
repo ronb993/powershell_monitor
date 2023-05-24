@@ -1,4 +1,4 @@
-import fetch_data, bad_juju, logging
+import fetch_json, bad_juju, logging
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO
 from threading import Lock
@@ -30,7 +30,7 @@ Grab powershell data and push to javascript
 def background_thread():
     print("Pulling powershell data")
     while True:
-        d = fetch_data.update_conn()
+        d = fetch_json.update_conn()
         u = connected_users
         b = bad_juju.offline_check()
         socketio.emit('updateData', {"conn":d, "users":u, "badip":b})

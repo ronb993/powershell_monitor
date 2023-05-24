@@ -1,8 +1,8 @@
 import json
 
-# Runs every 0.02 seconds from the background thread in main.py
+# Calls from main to push out tcp connections for monitoring
 def update_conn():
-    with open('.\\Data\\test.json', 'r', errors='ignore') as json_file:
+    with open('C:\\temp\\results\\monitor\\tcp_conn.json', 'r', errors='ignore') as json_file:
         try:
             data = json.load(json_file, strict=False)
         except Exception as e:
