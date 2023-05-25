@@ -1,4 +1,4 @@
-import re, requests, json, csv, os
+import re, requests, json, csv, os, winsound
 
 fields = ['LocalAddress',
           'LocalPort',
@@ -55,6 +55,9 @@ def offline_check():
     bad, obj = powershell_list_tcp()
     bad_ips = get_ips_locally() & bad
     if not len(bad_ips) == 0:
+        duration = 1000
+        freq = 440
+        winsound.Beep(freq, duration)
         for ip in bad_ips:
             for key in obj:
                 if key['RemoteAddress'] == ip:

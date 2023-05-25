@@ -11,7 +11,7 @@ connected_users = []
 """
 disables logging
 """
-logging.getLogger("werkzeug").disabled = False
+logging.getLogger("werkzeug").disabled = True
 
 """
 Background Thread
@@ -35,7 +35,7 @@ def background_thread():
             u = connected_users
             b = bad_juju.process_data('offline')
             socketio.emit('updateData', {"conn":d, "users":u, "badip":b})
-            socketio.sleep(0.3)
+            socketio.sleep(0.2)
         except Exception as ex:
             socketio.sleep(1)
             print(ex)
@@ -74,4 +74,4 @@ def disconnect():
 
 
 if __name__ == '__main__':
-    socketio.run(app, port=8080, host='0.0.0.0', debug=True)
+    socketio.run(app, port=8080, host='0.0.0.0', debug=False)
