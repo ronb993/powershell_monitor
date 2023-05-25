@@ -28,6 +28,7 @@ while($true){
         #@{name="cmdline";Expression={(Get-WmiObject Win32_Process -filter "ProcessId = $($_.OwningProcess)").commandline}} |
         Sort-Object RemoteAddress -Descending -Unique | ConvertTo-Json |
         set-content "C:\temp\results\json_data\tcp_conn.json"
+        Copy-Item "C:\temp\results\json_data\tcp_conn.json" -Destination "C:\temp\results\json_data\tcp_mal.json"
         start-sleep(0.2)
     }
     

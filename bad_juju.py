@@ -19,10 +19,10 @@ def get_ips_locally():
         lines = f.readlines()
     return set(re.findall(r'[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}', str(lines)))
 
-# Get IPs from tcp_conn.json (monitoring tool)
+# Get IPs from tcp_mal.json (monitoring tool)
 def powershell_list_tcp() -> set:
     result = set()
-    with open('C:\\temp\\results\\json_data\\tcp_conn.json', 'r') as myfile:
+    with open('C:\\temp\\results\\json_data\\tcp_mal.json', 'r') as myfile:
         data=myfile.read()
     obj = json.loads(data)
     conns = re.findall(r'[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}', str(obj))
