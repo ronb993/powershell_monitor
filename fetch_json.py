@@ -6,9 +6,8 @@ def update_conn():
         with open('C:\\temp\\results\\json_data\\tcp_conn.json', 'r') as json_file:
             data = json.load(json_file, strict=False)
         return data
-    except Exception as e:
-        print(e)
-        print("There is something wrong reading json from update_conn()")
+    except IOError:
+        print("File tcp_conn.json is already open")
 
 
 if __name__ == '__main__':

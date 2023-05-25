@@ -111,9 +111,8 @@ def write_to_csv(data):
                         csv_writer.writerow(row)
 
             return
-    except Exception as e:
-        print(e)
-        print("Make sure a file is not open at c:\\temp\\results\\bad_tcp\\")
+    except IOError:
+        print("bad_tcp.csv is already open")
 
     
 if __name__ == '__main__':
