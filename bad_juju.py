@@ -76,7 +76,7 @@ def process_data(get_type):
         data = offline_check()
     if data is not None:
         write_to_csv(data)
-    return data
+        return data
 
 def check_row(row_one, row_two):
     one = (row_one[0], row_one[1],
