@@ -76,9 +76,9 @@ function get_users(data){
 
 var socket = io.connect();
 $(document).ready(socket.on("updateData", function (data) {
-       receive_data(data.conn);
-       get_users(data.users);
-       get_badip(data.badip);
+       receive_data(data.tcp);
+       get_users(data.online_users);
+       get_badip(data.bad_connections);
 
 }));
 

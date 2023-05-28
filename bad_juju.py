@@ -1,4 +1,4 @@
-import re, requests, json, csv, os, winsound
+import re, requests, json, csv, os, winsound, run_powershell
 
 fields = ['LocalAddress',
           'LocalPort',
@@ -21,16 +21,15 @@ def get_ips_locally():
 
 # Get IPs from tcp_mal.json (monitoring tool)
 def powershell_list_tcp() -> set:
+    data = run_powershell.update_tcp()
+    data = json.loads(data)
     result = set()
-    with open('C:\\temp\\results\\json_data\\tcp_mal.json', 'r') as myfile:
-        data=myfile.read()
-    obj = json.loads(data)
-    conns = re.findall(r'[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}', str(obj))
+    conns = re.findall(r'[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}', str(data))
     for conn in conns:
         #If you are looking for non-private from malware ip list
         #if not ipaddress.IPv4Address(conn).is_private:
         result.add(conn)
-    return result, obj
+    return result, data
 
 # Choose online check if you wanna use the local ip list
 def online_check():

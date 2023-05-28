@@ -1,4 +1,4 @@
-import fetch_json, bad_juju, logging
+import run_powershell, bad_juju, logging, os
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO
 from threading import Lock
@@ -24,6 +24,12 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'donsky!'
 socketio = SocketIO(app, cors_allowed_origins='*')
 
+# prepare folders for data
+def setup_files():
+    if not os.path.exists('C:\\temp\\results'):
+        os.makedirs('C:\\temp\\results\\bad_tcp')
+        os.makedirs('C:\\temp\\results\\bad_udp')
+
 """
 Grab powershell data and push to javascript
 """
@@ -31,10 +37,11 @@ def background_thread():
     print("Pulling powershell data")
     while True:
         try:
-            d = fetch_json.update_conn()
-            u = connected_users
-            b = bad_juju.process_data('offline')
-            socketio.emit('updateData', {"conn":d, "users":u, "badip":b})
+            tcp = run_powershell.update_tcp()
+            online_users = connected_users
+            bad_connections = bad_juju.process_data('offline')
+            socketio.emit('updateData', {"tcp":tcp, "online_users":online_users,
+                                         "bad_connections":bad_connections})
             socketio.sleep(0.2)
         except Exception as ex:
             socketio.sleep(1)
@@ -74,4 +81,5 @@ def disconnect():
 
 
 if __name__ == '__main__':
+    setup_files()
     socketio.run(app, port=8080, host='0.0.0.0', debug=False)
