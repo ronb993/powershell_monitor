@@ -14,6 +14,9 @@ def update_udp():
 def update_ad():
     pass
 
+def update_ad_report():
+    pass
+
 if __name__ == '__main__':
     update_tcp()
 
