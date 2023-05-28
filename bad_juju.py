@@ -15,7 +15,7 @@ def get_ips_from_ipsum() -> set:
 
 # Get IP from local machine
 def get_ips_locally():
-    with open('.\\Data\ipsum.txt') as f:
+    with open('.\\Data\\badlist.txt') as f:
         lines = f.readlines()
     return set(re.findall(r'[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}', str(lines)))
 

@@ -11,7 +11,6 @@ else {
 }
 
 
-
 # While loop to push TCP connections
 # Todo - Add more data to be pushed out such as AD-OBJECTS
 write-host "Starting loop to monitor TCP Connections" -f Green
