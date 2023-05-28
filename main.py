@@ -1,4 +1,4 @@
-import run_powershell, bad_juju, logging, os
+import run_powershell, bad_juju, logging, os, json
 from flask import Flask, render_template, request
 from flask_socketio import SocketIO
 from threading import Lock
