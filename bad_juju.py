@@ -20,8 +20,7 @@ def get_ips_locally():
     return set(re.findall(r'[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}', str(lines)))
 
 # Get IPs from tcp_mal.json (monitoring tool)
-def powershell_list_tcp() -> set:
-    data = run_powershell.update_tcp()
+def powershell_list_tcp(data) -> set:
     data = json.loads(data)
     result = set()
     conns = re.findall(r'[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}', str(data))
@@ -37,6 +36,9 @@ def online_check():
     bad, obj = powershell_list_tcp()
     bad_ips = get_ips_from_ipsum() & bad
     if not len(bad_ips) == 0:
+        duration = 1000
+        freq = 440
+        winsound.Beep(freq, duration)
         for ip in bad_ips:
             for key in obj:
                 if key['RemoteAddress'] == ip:
@@ -49,9 +51,9 @@ def online_check():
     return ip_list
 
 # use offline check if you do not have internet
-def offline_check():
+def offline_check(json_data):
     ip_list = []
-    bad, obj = powershell_list_tcp()
+    bad, obj = powershell_list_tcp(json_data)
     bad_ips = get_ips_locally() & bad
     if not len(bad_ips) == 0:
         duration = 1000
@@ -66,17 +68,6 @@ def offline_check():
                     key["Time"], key["process"]))
         return ip_list
 
-def process_data(get_type):
-    if get_type == 'offline':
-        data = offline_check()
-    elif get_type == 'online':
-        data = online_check()
-    else:
-        data = offline_check()
-    if data is not None:
-        write_to_csv(data)
-        return data
-
 def check_row(row_one, row_two):
     one = (row_one[0], row_one[1],
     row_one[2], row_one[3],
@@ -90,7 +81,6 @@ def check_row(row_one, row_two):
         return True
     else:
         return False
-
 
 def write_to_csv(data):
     try:
@@ -116,7 +106,17 @@ def write_to_csv(data):
     except IOError:
         print("bad_tcp.csv is already open")
 
-    
+def process_data(get_type, json_data):
+    if get_type == 'offline':
+        data = offline_check(json_data)
+    elif get_type == 'online':
+        data = online_check(json_data)
+    else:
+        data = offline_check(json_data)
+    if data is not None:
+        write_to_csv(data)
+        return data
+
 if __name__ == '__main__':
     process_data('offline')
 

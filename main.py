@@ -39,7 +39,7 @@ def background_thread():
         try:
             tcp = run_powershell.update_tcp()
             online_users = connected_users
-            bad_connections = bad_juju.process_data('offline')
+            bad_connections = bad_juju.process_data('offline', tcp)
             socketio.emit('updateData', {"tcp":tcp, "online_users":online_users,
                                          "bad_connections":bad_connections})
             socketio.sleep(0.2)
